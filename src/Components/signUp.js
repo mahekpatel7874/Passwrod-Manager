@@ -9,11 +9,7 @@ import {
 } from "@mui/material";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import { auth } from "../firebase";
-import {
-  createUserWithEmailAndPassword,
-  updateProfile,
-  signOut,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
 
 function SignUp() {

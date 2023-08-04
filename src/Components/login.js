@@ -8,13 +8,13 @@ import {
   Typography,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState("");
+  const [setUserName] = useState("");
   const [values, setValues] = useState({ email: "", password: "" });
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -38,7 +38,7 @@ function Login() {
     setValues({ ...values, [name]: value });
   };
   const handleSubmit = async (e) => {
-    const { name, email, password } = values;
+    const { email, password } = values;
     if (email === "" || password === "") {
       setErrorMsg("Please Fill all Fields.");
       return;

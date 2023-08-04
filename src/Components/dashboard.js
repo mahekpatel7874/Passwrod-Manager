@@ -28,7 +28,6 @@ import {
   TextField,
   Toolbar,
   Tooltip,
-  Typography,
 } from "@mui/material";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import Snackbar from "@mui/material/Snackbar";
@@ -39,11 +38,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import CloseIcon from "@mui/icons-material/Close";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-
-function FavoriteIcon() {
-  return null;
-}
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -201,7 +195,7 @@ function Dashboard() {
   };
 
   const handleSubmitSubcategory = async (id) => {
-    const { title, username, password, otherDetails, date, key } = subcategory;
+    const { title, username, password } = subcategory;
 
     if (title === "" || username === "" || password === "") {
       setErrorMsg("Please Fill All Fields.");
